@@ -14,8 +14,15 @@ st.write(
     "Paste a resume and job description to predict whether the resume is a good fit."
 )
 
+
 resume_text = st.text_area("Resume Text", height=250)
 job_description_text = st.text_area("Job Description Text", height=250)
+
+if len(resume_text.split()) < 30 or len(job_description_text.split()) < 30:
+    st.warning(
+        "This prediction may be unreliable because the resume or job description is very short."
+    )
+
 
 if st.button("Predict Fit"):
     if not resume_text.strip() or not job_description_text.strip():
@@ -32,3 +39,9 @@ if st.button("Predict Fit"):
                 label: round(float(prob), 4)
                 for label, prob in probabilities.items()
             })
+
+st.subheader("Class Probabilities")
+
+for label, prob in probabilities.items():
+    st.write(f"**{label}:** {prob * 100:.1f}%")
+    st.progress(float(prob))
