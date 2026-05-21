@@ -12,6 +12,22 @@ This project uses NLP and machine learning to predict whether a resume is a good
 ## Tech Stack
 Python, pandas, scikit-learn, Hugging Face datasets, Streamlit
 
+## Model Performance
+
+The baseline model uses TF-IDF vectorization with Logistic Regression.
+
+| Metric | Score |
+|---|---:|
+| Accuracy | INSERT_SCORE_HERE |
+
+The model predicts one of three classes:
+
+- Good Fit
+- Potential Fit
+- No Fit
+
+A full evaluation report is available in `outputs/evaluation_report.txt`.
+
 ## Future Improvements
 - Add skill extraction
 - Add missing skill recommendations

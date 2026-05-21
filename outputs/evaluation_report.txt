@@ -1,0 +1,32 @@
+
+Resume–Job Fit Classifier Evaluation Report
+
+Model:
+TF-IDF + Logistic Regression
+
+Accuracy:
+0.5128
+
+Classes:
+['Good Fit', 'No Fit', 'Potential Fit']
+
+Classification Report:
+               precision    recall  f1-score   support
+
+     Good Fit       0.51      0.22      0.31       458
+       No Fit       0.54      0.84      0.66       857
+Potential Fit       0.34      0.19      0.24       444
+
+     accuracy                           0.51      1759
+    macro avg       0.47      0.42      0.40      1759
+ weighted avg       0.48      0.51      0.46      1759
+
+
+Confusion Matrix:
+Rows = Actual Labels
+Columns = Predicted Labels
+
+               Good Fit  No Fit  Potential Fit
+Good Fit            101     271             86
+No Fit               65     718             74
+Potential Fit        31     330             83
