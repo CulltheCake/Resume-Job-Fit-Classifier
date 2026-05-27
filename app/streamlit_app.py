@@ -17,7 +17,7 @@ st.set_page_config(
 )
 
 
-def render_skill_chips(skills, color="#eef2ff"):
+def render_skill_chips(skills, bg_color="#eef2ff", text_color="#111827"):
     """Render skills as small rounded chips."""
     if not skills:
         st.write("None found.")
@@ -28,12 +28,15 @@ def render_skill_chips(skills, color="#eef2ff"):
         chips_html += (
             f"<span style='"
             f"display:inline-block;"
-            f"background-color:{color};"
+            f"background-color:{bg_color};"
+            f"color:{text_color};"
             f"padding:6px 10px;"
             f"margin:4px;"
             f"border-radius:999px;"
             f"font-size:14px;"
+            f"font-weight:500;"
             f"border:1px solid #d4d4d8;"
+            f"line-height:1.8;"
             f"'>"
             f"{skill}"
             f"</span>"
