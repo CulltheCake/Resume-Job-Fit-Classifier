@@ -183,13 +183,15 @@ if st.button("Predict Fit", type="primary"):
             st.write("**Matched Skills**")
             render_skill_chips(
                 skill_analysis["matched_skills"],
-                color="#dcfce7",
+                bg_color="#dcfce7",
+                text_color="#166534",
             )
 
             st.write("**Missing Skills from Job Description**")
             render_skill_chips(
-                skill_analysis["missing_skills"],
-                color="#fee2e2",
+                 skill_analysis["missing_skills"],
+                bg_color="#fee2e2",
+                text_color="#991b1b",
             )
 
         with st.expander("View all extracted skills"):
@@ -197,8 +199,15 @@ if st.button("Predict Fit", type="primary"):
 
             with extracted_col1:
                 st.write("**Resume Skills**")
-                render_skill_chips(skill_analysis["resume_skills"])
-
+                render_skill_chips(
+                skill_analysis["resume_skills"],
+                bg_color="#e0f2fe",
+                text_color="#075985",
+                )
             with extracted_col2:
                 st.write("**Job Description Skills**")
-                render_skill_chips(skill_analysis["job_skills"])
+                render_skill_chips(
+                    skill_analysis["job_skills"],
+                    bg_color="#fef3c7",
+                    text_color="#92400e",
+                )
