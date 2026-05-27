@@ -6,6 +6,7 @@ The project combines a machine learning classifier with rule-based skill extract
 ## Demo
 
 ![Home Screen](image.png)
+![alt text](image-1.png)
 
 ## Project Overview
 
